@@ -1,0 +1,25 @@
+# === Data and model artifacts ===
+*.pkl
+*.csv
+
+# === Python cache & temp files ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# === Environment / IDE files ===
+.env
+venv/
+env/
+.venv/
+.vscode/
+.idea/
+
+# === OS / Editor junk ===
+.DS_Store
+Thumbs.db
+
+# === Jupyter checkpoints ===
+.ipynb_checkpoints/

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client Retention Analytics</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="banner">
+    <h1>Client Retention Analytics</h1>
+    <p>AI-powered insights to identify and prevent customer churn.</p>
+  </div>
+
+  <div class="card">
+    <h2>Predict Churn Probability</h2>
+    <p class="subtitle">Enter key client performance metrics below.</p>
+    <hr class="divider">
+
+    <form action="/predict" method="POST">
+      <input type="number" name="region" placeholder="Region (0–5)" step="any" value="{{ inputs.region if inputs else '' }}" required>
+      <input type="number" name="industry" placeholder="Industry (0–5)" step="any" value="{{ inputs.industry if inputs else '' }}" required>
+      <input type="number" name="sessions" placeholder="Sessions (5–500)" step="any" value="{{ inputs.sessions if inputs else '' }}" required>
+      <input type="number" name="revenue" placeholder="Revenue (£20k–100k)" step="any" value="{{ inputs.revenue if inputs else '' }}" required>
+      <input type="number" name="satisfaction_score" placeholder="Satisfaction Score (1–10)" step="any" value="{{ inputs.satisfaction_score if inputs else '' }}" required>
+      <input type="number" name="support_tickets" placeholder="Support Tickets (1–50)" step="any" value="{{ inputs.support_tickets if inputs else '' }}" required>
+
+      <div class="button-row">
+        <button type="submit">Run Prediction</button>
+        <button type="button" onclick="resetForm()" class="reset">Reset</button>
+      </div>
+    </form>
+
+    {% if result %}
+      <div id="result-container">{{ result|safe }}</div>
+    {% endif %}
+  </div>
+
+  <script>
+    function resetForm() {
+      document.querySelector("form").reset();
+      document.getElementById("result-container")?.remove();
+    }
+  </script>
+</body>
+</html>
