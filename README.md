@@ -72,8 +72,6 @@ This project demonstrates how data-driven insights can support customer retentio
 
 > ✅ The Random Forest model achieved the best balance between accuracy and interpretability.
 
-![Model Performance](https://chatgpt.com/c/images/sample_output.png)
-
 ---
 
 ## Flask Web Application
@@ -194,4 +192,5 @@ This project highlights how **AI-driven customer analytics** can help predict an
 Special thanks to the open-source **Flask** and **Scikit-learn** communities for providing robust frameworks that made this project possible.
 
 ---
+
 
