@@ -159,8 +159,6 @@ Access the app at:
 
 ## Insights Snapshot
 
-![Insight Graph](https://chatgpt.com/c/images/app_ui_screenshot.png)
-
 **Key Findings:**
 
 * High satisfaction and engagement correlate strongly with retention.
@@ -192,5 +190,6 @@ This project highlights how **AI-driven customer analytics** can help predict an
 Special thanks to the open-source **Flask** and **Scikit-learn** communities for providing robust frameworks that made this project possible.
 
 ---
+
 
 
